@@ -1,3 +1,19 @@
+:root {
+    font-size: 0.85em;
+}
+
+@media(min-width: 800px) {
+    :root {
+        font-size: 1em;
+    }
+}
+
+@media(min-width: 1200px){
+    :root{
+        font-size: 1.15em;
+    }
+}
+
 body {
     font-family: sans-serif;
 }
@@ -69,3 +85,61 @@ a:active {
     background-color: unset;
     text-decoration: revert;
 }
+
+.coffees {
+    margin: 20px 0;
+}
+
+.coffees a {
+    display: inline-block;
+    min-width: 300px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+@supports (display: grid) {
+    .coffees {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:10px;
+    }
+
+    @media(min-width:800px){
+        .coffees {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:10px;
+    }
+    }
+
+    .coffees a {
+        margin: unset;
+        min-width: unset;
+    }
+}
+
+.panel > h2 {
+    margin-top: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.panel {
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #999;
+    margin-bottom: 1em;
+}
+
+.panel  a {
+    color: revert;
+    background-color: unset;
+    text-decoration: revert;
+}
+
